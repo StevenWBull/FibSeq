@@ -7,14 +7,14 @@
 ExitProcess proto,dwExitCode:dword
 
 .data
-fibArr dword 7 dup (0) ; setup an array of length 7 with default values of 0
-fibArrLength dword LENGTHOF fibArr
-index dword 0
+fibArr dword 7 dup (0)					; setup an array of length 7 with default values of 0
+fibArrLength dword LENGTHOF fibArr		; get length of the array to determine how many intergers we need to calculate
+
 .code
 
 main proc
 
-	mov esi, index
+	mov esi, 0				; set the esi register to 0 to point to the first index address in fibArr
 	mov ecx, fibArrLength	; move length of array into ecx to track how many integers we want
 
 	mov fibArr[esi], 0		; move 0 into array at index 0 since the first index will be zero
