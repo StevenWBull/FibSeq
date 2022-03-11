@@ -26,9 +26,9 @@ main proc
 	dec ecx					; decrement ecx by one because we supplied one integer
 
 l1:
-	mov eax, fibArr[esi-8]	; Grab value Fib(n - 2)
-	mov ebx, fibArr[esi-4]	; Grab value Fib(n - 1)
-	add eax, ebx			; Fib(n - 1) + Fib(n - 2)
+	mov eax, fibArr[esi-8]	; eax = Fib(n - 2)
+	mov ebx, fibArr[esi-4]	; ebx = Fib(n - 1)
+	add eax, ebx			; eax = Fib(n - 1) + Fib(n - 2)
 	mov fibArr[esi], eax	; store sum of Fib(n - 1) + Fib(n - 2) at next index in fibArr
 	add esi, 4				; increment index by 4 bytes due to dword
 
