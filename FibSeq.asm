@@ -21,7 +21,7 @@ main proc
 	add esi, 4				; increment index by 4 bytes due to dword
 	dec ecx					; decrement ecx by one because we supplied one integer
 
-	mov fibArr[esi], 1		; move 1 into array at index 1 since the first index will be one
+	mov fibArr[esi], 1		; move 1 into array at index 1 since the second index will be one
 	add esi, 4				; increment index by 4 bytes due to dword
 	dec ecx					; decrement ecx by one because we supplied one integer
 
